@@ -64,6 +64,10 @@ class Blink1
     self.write_pattern_line(index, fade_millis, r, g, b)
   end
 
+  def sleep(sec)
+    self.class.sleep(sec * 1000)
+  end
+
   def self.list
     count = enumerate_vid_pid(vendor_id, product_id)
     i = 0
@@ -88,5 +92,4 @@ class Blink1
     end
     b
   end
-
 end
